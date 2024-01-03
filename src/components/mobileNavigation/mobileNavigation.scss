@@ -1,0 +1,33 @@
+@import '../../stylesVariables/stylesVariables.scss';
+
+.mobile_drawer{
+    width: 100%;
+    max-width: 50px;
+    height: 100vh;
+    background: $white;
+    position: absolute;
+    padding: 0 !important;
+}
+
+.css-79z5gx{
+    padding: 0 !important;
+}
+
+.mobile_drawer-btn{
+    display:  flex;
+    gap: 5px;
+    flex-flow: column;
+    width: 50px;
+    padding: 10px;
+
+    span {
+        background: $hovered-porpure;
+        width: 100%;
+        max-width: 30px;
+        height: 3px;
+    }
+}
+
+.mobile_drawer-close-btn{
+    z-index: 3;
+}

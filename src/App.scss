@@ -1,0 +1,30 @@
+@import './stylesVariables/stylesVariables.scss';
+
+.dashboard_main{
+    background: $lignt-bg_gray;
+}
+
+.mobile_navigation{
+    display: none;
+}
+
+.desktop_navigation{
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile_navigation{
+        display: block;
+    }
+    .desktop_navigation{
+        display: none;
+    }
+}
+@media screen and (max-device-width: 768px)  {
+    .mobile_navigation{
+        display: block;
+    }
+    .desktop_navigation{
+        display: none;
+    }
+}

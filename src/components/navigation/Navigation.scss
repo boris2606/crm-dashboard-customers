@@ -1,0 +1,120 @@
+@import '../../stylesVariables/stylesVariables.scss';
+
+.navigation_block{
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    max-width: 306px;
+    height: 100vh;
+    padding: 28px 28px 59px 28px;
+    justify-content: space-between;
+    box-shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
+    position: fixed;
+    z-index: 2;
+    overflow-y: scroll;
+}
+
+.navigation_wrapper{
+    display: flex;
+    flex-flow: column;
+    gap: 64px;
+}
+
+.navigation_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.navigation_version{
+    font: 500 10px $basic-font;
+    margin-top: 10px;
+    color: $light-dark;
+}
+
+.navigation_list{
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+
+    li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 11px;
+        font: 500 14px $basic-font;
+        border-radius: 8px;
+        transition: .5s all ease;
+        cursor: pointer;
+        position: relative;
+        
+        &:nth-child(1){
+            &::after{
+                display: none;
+            }
+        }
+
+        &::after{
+            content: '';
+            background: url(../../img/arrow_right.svg) no-repeat center;
+            background-size: cover;
+            width: 10px;
+            height: 10px;
+            right: 8px;
+            position: absolute;
+        }
+
+        &:hover { 
+            background: $hovered-porpure;
+            color: $white;
+
+            &::after{
+                filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7427%) hue-rotate(23deg) brightness(118%) contrast(118%);
+            }
+
+            img {
+                filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7427%) hue-rotate(23deg) brightness(118%) contrast(118%);
+            }
+        }
+    }
+}
+
+.navigation-list_active {
+    background: $hovered-porpure;
+    color: $white;
+
+    &::after{
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7427%) hue-rotate(23deg) brightness(118%) contrast(118%);
+    }
+
+    img {
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7427%) hue-rotate(23deg) brightness(118%) contrast(118%);
+    }
+}
+
+.login-person{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    margin-top: 50px;
+}
+
+.login-person_avatar{
+    width: 42px;
+    height: 42px;
+}
+
+.login-person_info{
+    p {
+        font: 400 12px $basic-font;
+        color: $light-dark;
+
+        &:nth-child(1){
+            font: 500 14px $basic-font;
+            color: $dark;
+        }
+    }
+}
